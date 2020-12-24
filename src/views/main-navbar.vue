@@ -3,7 +3,7 @@
     <div class="site-navbar__header">
       <h1 class="site-navbar__brand" @click="$router.push({ name: 'home' })">
         <a class="site-navbar__brand-lg" href="javascript:;">wby-tech</a>
-        <a class="site-navbar__brand-mini" href="javascript:;">BS</a>
+        <a class="site-navbar__brand-mini" href="javascript:;">WBY</a>
       </h1>
     </div>
     <div class="site-navbar__body clearfix">
