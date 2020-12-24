@@ -48,7 +48,7 @@
 
 #### 赞赏
 
-![qq](docs/images/QQ.png)
+![wx](docs/images/QQ.png)
 
 #### 更新日志
 
