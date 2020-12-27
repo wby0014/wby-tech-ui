@@ -8,6 +8,7 @@ import * as sysMenu from './modules/sys-menu'
 import * as sysRole from './modules/sys-role'
 import * as sysUser from './modules/sys-user'
 
+
 // tips
 // 1. 开启/关闭[业务模块]拦截, 通过调用fnCreate方法[isOpen参数]设置.
 // 2. 开启/关闭[业务模块中某个请求]拦截, 通过函数返回对象中的[isOpen属性]设置.
@@ -19,6 +20,7 @@ fnCreate(sysLog, false)
 fnCreate(sysMenu, false)
 fnCreate(sysRole, false)
 fnCreate(sysUser, false)
+
 
 /**
  * 创建mock模拟数据
@@ -43,3 +45,5 @@ function fnCreate (mod, isOpen = true) {
     }
   }
 }
+
+

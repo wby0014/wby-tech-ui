@@ -24,7 +24,7 @@ const globalRoutes = [
 // 主入口路由(需嵌套上左右整体布局)
 const mainRoutes = {
   path: '/',
-  component: _import('main'),
+  component: _import('main/main'),
   name: 'main',
   redirect: { name: 'home' },
   meta: { title: '主入口整体布局' },
@@ -33,8 +33,8 @@ const mainRoutes = {
     // 1. isTab: 是否通过tab展示内容, true: 是, false: 否
     // 2. iframeUrl: 是否通过iframe嵌套展示内容, '以http[s]://开头': 是, '': 否
     // 提示: 如需要通过iframe嵌套展示内容, 但不通过tab打开, 请自行创建组件使用iframe处理!
-    { path: '/home', component: _import('common/home'), name: 'home', meta: { title: '首页' } },
-    { path: '/chart', component: _import('common/chart'), name: 'chart', meta: { title: '图表' } },
+    { path: '/home', component: _import('dashboard/index'), name: 'home', meta: { title: '首页' } },
+    { path: '/profile', component: _import('profile/index'), name: 'profile', meta: { title: 'profile' } },
     { path: '/theme', component: _import('common/theme'), name: 'theme', meta: { title: '主题' } }
     
   ],
@@ -132,7 +132,7 @@ function fnAddDynamicMenuRoutes (menuList = [], routes = []) {
         route['meta']['iframeUrl'] = menuList[i].url
       } else {
         try {
-          route['component'] = _import(`modules/${menuList[i].url}`) || null
+          route['component'] = _import(`${menuList[i].url}`) || null
         } catch (e) {}
       }
       routes.push(route)

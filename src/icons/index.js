@@ -13,8 +13,17 @@
 import Vue from 'vue'
 import IconSvg from '@/components/icon-svg'
 import './iconfont.js'
+import SvgIcon from '@/components/SvgIcon'// svg component
+
+
 
 Vue.component('IconSvg', IconSvg)
+// register globally
+Vue.component('svg-icon', SvgIcon)
+
+const req = require.context('./svg', false, /\.svg$/)
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+requireAll(req)
 
 const svgFiles = require.context('./svg', true, /\.svg$/)
 const iconList = svgFiles.keys().map(item => svgFiles(item))
