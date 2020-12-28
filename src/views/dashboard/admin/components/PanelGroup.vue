@@ -35,7 +35,7 @@
           <div class="card-panel-text">
             余额
           </div>
-          <count-to :start-val="0" :end-val="1010000" :duration="3200" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="1010968" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
