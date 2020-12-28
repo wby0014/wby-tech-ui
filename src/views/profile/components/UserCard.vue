@@ -1,25 +1,25 @@
 <template>
   <el-card style="margin-bottom:20px;">
     <div slot="header" class="clearfix">
-      <span>About me</span>
+      <span>关于我</span>
     </div>
 
     <div class="user-profile">
       <div class="box-center">
-        <pan-thumb :image="user.avatar" :height="'100px'" :width="'100px'" :hoverable="false">
+        <pan-thumb :image="user.avatar" :height="'100px'" :width="'100px'" :hoverable="true">
           <div>Hello World</div>
           {{ user.role }}
         </pan-thumb>
       </div>
       <div class="box-center">
         <div class="user-name text-center">{{ user.name }}</div>
-        <div class="user-role text-center text-muted">{{ user.role | uppercaseFirst }}</div>
+        <div class="user-role text-center text-muted">{{ user.role }}</div>
       </div>
     </div>
 
     <div class="user-bio">
       <div class="user-education user-bio-section">
-        <div class="user-bio-section-header"><svg-icon icon-class="education" /><span>GitHub</span></div>
+        <div class="user-bio-section-header"><icon-svg name="education" /><span>GitHub</span></div>
         <div class="user-bio-section-body">
           <div class="text-muted">
             https://github.com/wby0014/
@@ -29,23 +29,39 @@
       </div>
 
       <div class="user-skills user-bio-section">
-        <div class="user-bio-section-header"><svg-icon icon-class="skill" /><span>Skills</span></div>
+        <div class="user-bio-section-header"><icon-svg name="skill" /><span>Skills</span></div>
         <div class="user-bio-section-body">
           <div class="progress-item">
-            <span>Vue</span>
+            <span>Java</span>
+            <el-progress :percentage="99" status="success" />
+          </div>
+          <div class="progress-item">
+            <span>分布式</span>
             <el-progress :percentage="70" />
           </div>
           <div class="progress-item">
-            <span>JavaScript</span>
-            <el-progress :percentage="18" />
+            <span>微服务</span>
+            <el-progress :percentage="86" />
           </div>
           <div class="progress-item">
-            <span>Css</span>
-            <el-progress :percentage="12" />
+            <span>MySQL</span>
+            <el-progress :percentage="90" />
           </div>
           <div class="progress-item">
-            <span>ESLint</span>
-            <el-progress :percentage="100" status="success" />
+            <span>RocketMQ</span>
+            <el-progress :percentage="70" />
+          </div>
+          <div class="progress-item">
+            <span>zookeeper</span>
+            <el-progress :percentage="66" />
+          </div>
+          <div class="progress-item">
+            <span>Vue</span>
+            <el-progress :percentage="29" />
+          </div>
+          <div class="progress-item">
+            <span>Docker</span>
+            <el-progress :percentage="46" />
           </div>
         </div>
       </div>
@@ -63,9 +79,9 @@ export default {
       type: Object,
       default: () => {
         return {
-          name: '',
+          name: 'wby',
           email: '',
-          avatar: '',
+          avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
           role: ''
         }
       }

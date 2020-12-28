@@ -11,8 +11,8 @@
           <span slot="title">首页</span>
         </el-menu-item>
         <el-menu-item index="profile" @click="$router.push({ name: 'profile' })">
-          <icon-svg name="tubiao" class="site-sidebar__menu-icon"></icon-svg>
-          <span slot="title">profile</span>
+          <icon-svg name="user" class="site-sidebar__menu-icon"></icon-svg>
+          <span slot="title">个人中心</span>
         </el-menu-item>
         <sub-menu
           v-for="menu in menuList"

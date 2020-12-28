@@ -1,7 +1,7 @@
 <template>
   <div class="icons-container">
     <aside>
-      <a href="https://panjiachen.github.io/vue-element-admin-site/guide/advanced/icon.html" target="_blank">Add and use
+      <a href="http://www.iconfont.cn/" target="_blank">Add and use
       </a>
     </aside>
     <el-tabs type="border-card">
@@ -13,7 +13,7 @@
                 {{ generateIconCode(item) }}
               </div>
               <div class="icon-item">
-                <svg-icon :icon-class="item" class-name="disabled" />
+                <icon-svg :name="item.substr(5)"  />
                 <span>{{ item }}</span>
               </div>
             </el-tooltip>
@@ -43,20 +43,18 @@
 import clipboard from '@/utils/clipboard'
 import svgIcons from './svg-icons'
 import elementIcons from './element-icons'
-import indexIcons from './index'
 
 export default {
   name: 'Icons',
   data() {
     return {
       svgIcons,
-      elementIcons,
-      indexIcons
+      elementIcons
     }
   },
   methods: {
     generateIconCode(symbol) {
-      return `<svg-icon icon-class="${symbol}" />`
+      return `<icon-svg name="${symbol.substr(5)}" />`
     },
     generateElementIconCode(symbol) {
       return `<i class="el-icon-${symbol}" />`
